@@ -4,6 +4,9 @@ import withPosts from 'nextein/posts'
 import { Content } from 'nextein/post'
 import Link from 'nextein/link'
 
+
+const dashes = (str) => (str.toLowerCase().replace(' ', '-'))
+
 class Index extends Component {
 
     render () {
@@ -20,7 +23,7 @@ class Index extends Component {
                 <section>
                 {
                     posts.map(post => (
-                        <article key={`post-${post.data.title}`}>
+                        <article key={`post-${dashes(post.data.title)}`}>
                             <header>
                                 <h2><Link {...post}><a>{post.data.title}</a></Link></h2>
                             </header>
