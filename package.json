@@ -1,0 +1,19 @@
+{
+  "name": "nextein-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nextein",
+    "export": "nextein build && nextein export"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^4.2.0",
+    "nextein": "^1.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}
