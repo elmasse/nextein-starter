@@ -28,16 +28,16 @@ main > header {
 
 
 main > header h1 {
-    font-weight: 100;
-    font-size: 3em;
-    margin: 0 30px;
+  font-weight: 100;
+  font-size: 3em;
+  margin: 0 30px;
 }
 
 main > section {
-    padding: 20px;
+  padding: 20px;
 }
 
 article > header a {
-    text-decoration-color:  #ccc;
-    color: #000;
+  text-decoration-color:  #ccc;
+  color: #000;
 }
