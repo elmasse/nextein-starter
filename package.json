@@ -2,7 +2,7 @@
   "name": "nextein-starter",
   "version": "1.0.0",
   "description": "A nextein starter kit",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "dev": "nextein",
     "export": "nextein build && nextein export"
@@ -11,8 +11,8 @@
   "author": "Maximiliano Fierro",
   "license": "ISC",
   "dependencies": {
-    "next": "^5.1.0",
-    "nextein": "^1.2.3",
+    "next": "^6.0.3",
+    "nextein": "^1.3.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2"
   }
