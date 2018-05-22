@@ -14,6 +14,7 @@ class Index extends Component {
     return (
       <main>
         <Head>
+          <title>Nextein Starter</title>
           <link type="text/css" rel="stylesheet" href="/static/stylesheet.css" />
         </Head>
         <header>
