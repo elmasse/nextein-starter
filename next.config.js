@@ -1,5 +1,5 @@
-const { default: config } = require('nextein/config');
+const { withNextein } = require('nextein/config')
 
-module.exports = config({
+module.exports = withNextein({
   // your next.js config goes here
 })
