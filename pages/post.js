@@ -5,7 +5,7 @@ import withPost, { Content } from 'nextein/post'
 export default withPost(({ post }) => (
   <main>
     <Head>
-      <link type="text/css" rel="stylesheet" href="/static/stylesheet.css" />
+      <title>Nextein Starter | {post.data.title}</title>
     </Head>
     <header>
       <h1>{post.data.title}</h1>

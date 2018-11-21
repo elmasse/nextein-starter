@@ -15,7 +15,6 @@ class Index extends Component {
       <main>
         <Head>
           <title>Nextein Starter</title>
-          <link type="text/css" rel="stylesheet" href="/static/stylesheet.css" />
         </Head>
         <header>
           <h1 className="brand">Nextein</h1>
@@ -28,7 +27,7 @@ class Index extends Component {
                 <header>
                   <h2><Link {...post}><a>{post.data.title}</a></Link></h2>
                 </header>
-                <Content {...post} excerpt />
+                <Content {...post} />
               </article>
             ))
           }
