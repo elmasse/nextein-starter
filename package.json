@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "nextein",
-    "export": "nextein build && nextein export"
+    "export": "nextein build && nextein export",
+    "now-build": "npm run export"
   },
   "keywords": [],
   "author": "Maximiliano Fierro",
