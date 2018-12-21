@@ -1,0 +1,12 @@
+{
+  "name": "Nextein Starter Blog",
+  "authors": {
+    "elmasse": {
+      "name": "Max Fierro",
+      "twitter": "elmasse"
+    },
+    "wikipedia": {
+      "name": "Wikipedia, the free encyclopedia"
+    }
+  }
+}

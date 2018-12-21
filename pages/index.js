@@ -4,8 +4,7 @@ import withPosts from 'nextein/posts'
 import { Content } from 'nextein/post'
 import Link from 'nextein/link'
 
-
-const dashes = (str) => (str.toLowerCase().replace(' ', '-'))
+import { name, authors } from '../site';
 
 class Index extends Component {
 
@@ -17,20 +16,26 @@ class Index extends Component {
           <title>Nextein Starter</title>
         </Head>
         <header>
-          <h1 className="brand">Nextein</h1>
-          <p className="welcome">Welcome to your Nextein Blog Site!</p>
+          <h1>{name}</h1>
         </header>
         <section>
-          {
-            posts.map(post => (
-              <article key={`post-${dashes(post.data.title)}`}>
+          {posts.map(post => {
+            const author = authors[post.data.author]
+            const source = authors[post.data.source]
+            return (
+              <article key={post.data.url}>
                 <header>
                   <h2><Link {...post}><a>{post.data.title}</a></Link></h2>
+                  <p>
+                  {author && `Written by ${author.name}`}
+                  {author && source && ` ${String.fromCharCode(183)} `}
+                  {source && `From ${source.name}`}
+                  </p>
                 </header>
-                <Content {...post} />
+                <Content {...post} excerpt/>
               </article>
-            ))
-          }
+            )
+          })}
         </section>
       </main>
     )
