@@ -15,6 +15,13 @@ Follow the next steps to get you up and running with your first Nextein site:
 
 - Run `npm run export`
 
+# Deploy to `now.sh`
+
+The Nextein Starter includes a `now.json` file with configuration to deploy to `now.sh`. _You'll need a now account and get `now cli` installed._ Then just run:
+
+```
+$ now
+```
 
 # More information
 
