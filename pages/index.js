@@ -13,7 +13,7 @@ class Index extends Component {
     return (
       <main>
         <Head>
-          <title>Nextein Starter</title>
+          <title>{name}</title>
         </Head>
         <header>
           <h1>{name}</h1>

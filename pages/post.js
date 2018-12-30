@@ -11,7 +11,7 @@ export default withPost(({ post }) => {
   return (
     <main>
       <Head>
-        <title>Nextein Starter | {post.data.title}</title>
+        <title>{name} | {post.data.title}</title>
       </Head>
       <header>
         <nav><Link href="/"><a>{name}</a></Link></nav>
