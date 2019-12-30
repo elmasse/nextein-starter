@@ -1,5 +1,5 @@
 import React from 'react'
-import App, { Container } from 'next/app'
+import App from 'next/app'
 
 export default class MyApp extends App {
   static async getInitialProps({ Component, router, ctx }) {
@@ -16,8 +16,8 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props
 
     return (
-      <Container>
-<style jsx global>{`
+      <div>
+        <style jsx global>{`
             body {
               font-size: 18px;
               font-family: "Helvetica Neue", "Lucida Grande", sans-serif;
@@ -89,7 +89,7 @@ export default class MyApp extends App {
 
           `}</style>
           <Component {...pageProps} />
-      </Container>
+      </div>
     )
   }
 }
