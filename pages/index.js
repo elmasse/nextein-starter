@@ -1,20 +1,17 @@
 import React, { Component } from 'react'
-import Head from 'next/head'
 import withPosts from 'nextein/posts'
 import { Content } from 'nextein/post'
 import Link from 'nextein/link'
 
-import { name, authors } from '../site';
+import { name, authors } from '../site'
+import Layout from '../components/layout'
 
 class Index extends Component {
 
   render() {
     const { posts } = this.props
     return (
-      <main>
-        <Head>
-          <title>{name}</title>
-        </Head>
+      <Layout title={name}>
         <header>
           <h1>{name}</h1>
         </header>
@@ -25,19 +22,60 @@ class Index extends Component {
             return (
               <article key={post.data.url}>
                 <header>
-                  <h2><Link {...post}><a>{post.data.title}</a></Link></h2>
+                  <h1>
+                    <Link {...post} passHref><a>{post.data.title}</a></Link>
+                  </h1>
                   <p>
-                  {author && `Written by ${author.name}`}
-                  {author && source && ` ${String.fromCharCode(183)} `}
-                  {source && `From ${source.name}`}
+                    {author && `Written by ${author.name}`}
+                    {author && source && ` ${String.fromCharCode(183)} `}
+                    {source && `From ${source.name}`}
                   </p>
                 </header>
-                <Content {...post} excerpt/>
+                <Content {...post} excerpt />
               </article>
             )
           })}
         </section>
-      </main>
+        <style jsx>{`
+          header {
+            margin-top: 32px;
+            margin-bottom: 64px;
+          }
+
+          header h1 {
+            font-size: 48px;
+          }
+  
+          section {
+            margin: 40px 0;
+          }
+          
+          article {
+            margin-bottom: 40px;
+          }
+
+          article header {
+            margin-top: 16px;
+            margin-bottom: 8px;
+          }
+
+          article header h1 {
+            font-size: 32px;
+            margin: 0;
+          }
+
+          article header h1 :global(a) {
+            text-decoration: none;
+          }
+          
+          article header p {
+            line-height: calc(24/12);
+            font-size: 12px;
+            color: #444;
+            margin: 0;
+          }
+        `}</style>
+      </Layout>
     )
   }
 }

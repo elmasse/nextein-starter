@@ -1,20 +1,15 @@
 import React from 'react'
-import Head from 'next/head'
 import withPost, { Content } from 'nextein/post'
-import Link from 'nextein/link'
 
 import { name, authors } from '../site';
+import Layout from '../components/layout'
 
 export default withPost(({ post }) => {
   const author = authors[post.data.author]
   const source = authors[post.data.source]
   return (
-    <main>
-      <Head>
-        <title>{name} | {post.data.title}</title>
-      </Head>
+    <Layout title={`${name} - ${post.data.title}`} showNav>
       <header>
-        <nav><Link href="/"><a>{name}</a></Link></nav>
         <h1>{post.data.title}</h1>
         <p>
           {author && `Written by ${author.name}`}
@@ -24,11 +19,18 @@ export default withPost(({ post }) => {
       </header>
       <section>
         <Content {...post} />
-        <style jsx>{`
-          section { background: #fefefe; }
-        `}</style>
       </section>
-    </main>
+      <style jsx>{`
+        header {
+          margin: 64px 0;
+        }
+
+        header h1 {
+          font-size: 48px;
+        }
+
+      `}</style>
+    </Layout>
   )
 })
 
