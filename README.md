@@ -27,7 +27,7 @@ $ vercel
 
 Use the deploy button to create a Vercel Project
 
-[![Deploy to Vercel](https://vercel.com/button)](/import/project?template=https://github.com/elmasse/nextein-starter/tree/master)
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/elmasse/nextein-starter/tree/master)
 
 # More information
 
