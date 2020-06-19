@@ -1,6 +1,6 @@
 # Nextein Starter
 
-This is an starter skeleton for [Nextein](https://nextein.now.sh) sites.
+This is an starter skeleton for [Nextein](https://nextein.elmasse.io) sites.
 
 # Development
 
@@ -15,17 +15,23 @@ Follow the next steps to get you up and running with your first Nextein site:
 
 - Run `npm run export`
 
-# Deploy to `now.sh`
+# Deploy to Vercel
 
-The Nextein Starter includes a `now.json` file with configuration to deploy to `now.sh`. _You'll need a now account and get `now cli` installed._ Then just run:
+The Nextein Starter includes a `vercel.json` file with configuration to deploy to Vercel. _You'll need a Vercel account and get `vercel` cli installed._ Then just run:
 
 ```
-$ now
+$ vercel
 ```
+
+## Deploy using this template
+
+Use the deploy button to create a Vercel Project
+
+[![Deploy to Vercel](https://vercel.com/button)](/import/project?template=https://github.com/elmasse/nextein-starter/tree/master)
 
 # More information
 
 - Check the [nextein repository](https://github.com/elmasse/nextein)
-- [Documentation](https://nextein.now.sh/docs) 
-- [Guides](https://nextein.now.sh/guides)
+- [Documentation](https://nextein.elmasse.io/docs) 
+- [Guides](https://nextein.elmasse.io/guides)
 
