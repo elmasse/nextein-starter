@@ -8,10 +8,11 @@ export default function Layout({ title, showNav = false, children }) {
   return (
     <div className="root">
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <title>{title}</title>
       </Head>
-      {showNav && (<nav><Link href="/" passHref><a>{name}</a></Link></nav>)}
       <main>
+        {showNav && (<nav><Link href="/" passHref><a>{name}</a></Link></nav>)}
         {children}
       </main>
       <footer>
