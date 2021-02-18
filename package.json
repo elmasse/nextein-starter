@@ -12,9 +12,12 @@
   "author": "Maximiliano Fierro",
   "license": "ISC",
   "dependencies": {
-    "next": "^10.0.2",
+    "next": "^10.0.7",
     "nextein": "^3.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.44.0"
   }
 }
