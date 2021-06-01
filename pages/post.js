@@ -1,14 +1,14 @@
 import React from 'react'
 import withPost, { Content } from 'nextein/post'
 
-import { name, authors } from '../site';
+import site from '../site';
 import Layout from '../components/layout'
 
 export default withPost(({ post }) => {
-  const author = authors[post.data.author]
-  const source = authors[post.data.source]
+  const author = site.authors[post.data.author]
+  const source = site.authors[post.data.source]
   return (
-    <Layout title={`${name} - ${post.data.title}`} showNav>
+    <Layout title={`${site.name} - ${post.data.title}`} showNav>
       <header>
         <h1>{post.data.title}</h1>
         <p>

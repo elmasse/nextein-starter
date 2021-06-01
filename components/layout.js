@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'nextein/link'
 
-import { name } from '../site';
+import site from '../site';
 
 export default function Layout({ title, showNav = false, children }) {
   return (
@@ -12,7 +12,7 @@ export default function Layout({ title, showNav = false, children }) {
         <title>{title}</title>
       </Head>
       <main>
-        {showNav && (<nav><Link href="/" passHref><a>{name}</a></Link></nav>)}
+        {showNav && (<nav><Link href="/" passHref><a>{site.name}</a></Link></nav>)}
         {children}
       </main>
       <footer>

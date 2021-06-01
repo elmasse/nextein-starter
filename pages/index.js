@@ -3,7 +3,7 @@ import withPosts from 'nextein/posts'
 import { Content } from 'nextein/post'
 import Link from 'nextein/link'
 
-import { name, authors } from '../site'
+import site from '../site'
 import Layout from '../components/layout'
 
 class Index extends Component {
@@ -11,14 +11,14 @@ class Index extends Component {
   render() {
     const { posts } = this.props
     return (
-      <Layout title={name}>
+      <Layout title={site.name}>
         <header>
-          <h1>{name}</h1>
+          <h1>{site.name}</h1>
         </header>
         <section>
           {posts.map(post => {
-            const author = authors[post.data.author]
-            const source = authors[post.data.source]
+            const author = site.authors[post.data.author]
+            const source = site.authors[post.data.source]
             return (
               <article key={post.data.url}>
                 <header>
