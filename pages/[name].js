@@ -1,24 +1,22 @@
 
-/* This is experimental */
-import fetcher from 'nextein/fetcher'
+
+import { getData, getPost }  from 'nextein/fetcher'
 
 import Content from 'nextein/content'
 
 import site from '../site'
 import Layout from '../components/layout'
 
-const { getData, getPost } = fetcher()
-
 export async function getStaticPaths () {
   const data = await getData()
   return {
-    paths: data.map(({ name }) => ({ params: { name } })),
+    paths: data.map(({ name, __id }) => ({ params: { name, __id } })),
     fallback: false
   }
 }
 
 export async function getStaticProps ({ params }) {
-  const post = await getPost(params)
+  const post = await getPost(params)  
   return { props: { post } }
 }
 

@@ -4,16 +4,18 @@
   "description": "A nextein starter kit",
   "private": true,
   "scripts": {
-    "dev": "nextein",
-    "export": "nextein build && nextein export",
-    "now-build": "npm run export"
+    "dev": "next",
+    "export": "next build && next export",
+    "now-build": "npm run export",
+    "analyze": "ANALYZE=true next build"
   },
   "keywords": [],
   "author": "Maximiliano Fierro",
   "license": "ISC",
   "dependencies": {
+    "@next/bundle-analyzer": "^11.1.2",
     "next": "^11.1.2",
-    "nextein": "^3.2.3",
+    "nextein": "^4.0.0-beta.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }
