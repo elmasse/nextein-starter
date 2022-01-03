@@ -16,7 +16,7 @@ export async function getStaticProps () {
   }
 }
 
-export default function Index ({ posts, pills }) {
+export default function Index ({ posts }) {
   return (
       <Layout title={site.name}>
         <header>
@@ -24,14 +24,14 @@ export default function Index ({ posts, pills }) {
         </header>
         <section>
           {posts.map(post => {
-            const link = post.data.page ? post : { href: `/${post.data.name}` } // <== this is /pages/[name].js
+            // const link = post.data.page ? post : { href: `/${post.data.name}` } // <== this is /pages/[name].js
             const author = site.authors[post.data.author]
             const source = site.authors[post.data.source]
             return (
               <article key={post.data.__id}>
                 <header>
                   <h1>
-                    <Link {...link}><a>{post.data.title}</a></Link>
+                    <Link href={'/[name]'}  as={`/${post.data.name}`}><a>{post.data.title}</a></Link>
                   </h1>
                   <p>
                     {author && `Written by ${author.name}`}

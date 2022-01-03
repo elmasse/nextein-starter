@@ -10,7 +10,7 @@ import Layout from '../components/layout'
 export async function getStaticPaths () {
   const data = await getData()
   return {
-    paths: data.map(({ name, __id }) => ({ params: { name, __id } })),
+    paths: data.map(({ name }) => ({ params: { name } })),
     fallback: false
   }
 }
