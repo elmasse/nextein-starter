@@ -1,29 +1,37 @@
-import React, { Component } from 'react'
-import withPosts from 'nextein/posts'
-import { Content } from 'nextein/post'
-import Link from 'nextein/link'
+
+import { getPosts } from 'nextein/fetcher'
+import Content from 'nextein/content'
+
+import Link from 'next/link'
 
 import site from '../site'
 import Layout from '../components/layout'
 
-class Index extends Component {
+export async function getStaticProps () {
+  const posts = await getPosts()
+  return { 
+    props: { 
+      posts
+    }
+  }
+}
 
-  render() {
-    const { posts } = this.props
-    return (
+export default function Index ({ posts }) {
+  return (
       <Layout title={site.name}>
         <header>
           <h1>{site.name}</h1>
         </header>
         <section>
           {posts.map(post => {
+            // const link = post.data.page ? post : { href: `/${post.data.name}` } // <== this is /pages/[name].js
             const author = site.authors[post.data.author]
             const source = site.authors[post.data.source]
             return (
-              <article key={post.data.url}>
+              <article key={post.data.__id}>
                 <header>
                   <h1>
-                    <Link {...post} passHref><a>{post.data.title}</a></Link>
+                    <Link href={'/[name]'}  as={`/${post.data.name}`}><a>{post.data.title}</a></Link>
                   </h1>
                   <p>
                     {author && `Written by ${author.name}`}
@@ -78,6 +86,5 @@ class Index extends Component {
       </Layout>
     )
   }
-}
 
-export default withPosts(Index)
+// export default withPosts(Index)

@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import Link from 'nextein/link'
+import Link from 'next/link'
 
 import site from '../site';
 

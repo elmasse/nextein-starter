@@ -1,10 +1,26 @@
-import React from 'react'
-import withPost, { Content } from 'nextein/post'
 
-import site from '../site';
+
+import { getData, getPost }  from 'nextein/fetcher'
+
+import Content from 'nextein/content'
+
+import site from '../site'
 import Layout from '../components/layout'
 
-export default withPost(({ post }) => {
+export async function getStaticPaths () {
+  const data = await getData()
+  return {
+    paths: data.map(({ name }) => ({ params: { name } })),
+    fallback: false
+  }
+}
+
+export async function getStaticProps ({ params }) {
+  const post = await getPost(params)  
+  return { props: { post } }
+}
+
+export default function Post ({ post }) {
   const author = site.authors[post.data.author]
   const source = site.authors[post.data.source]
   return (
@@ -32,5 +48,5 @@ export default withPost(({ post }) => {
       `}</style>
     </Layout>
   )
-})
+}
 
