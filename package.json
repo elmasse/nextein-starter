@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next",
     "export": "next build && next export",
-    "now-build": "npm run export",
+    "build": "npm run export",
     "analyze": "ANALYZE=true next build"
   },
   "keywords": [],
@@ -15,7 +15,7 @@
   "dependencies": {
     "@next/bundle-analyzer": "^12.0.7",
     "next": "12.0.5",
-    "nextein": "^4.0.0",
+    "nextein": "^4.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }
