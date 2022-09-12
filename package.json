@@ -14,8 +14,8 @@
   "license": "ISC",
   "dependencies": {
     "@next/bundle-analyzer": "^12.2.0",
-    "next": "^12.2.0",
-    "nextein": "^4.1.0",
+    "next": "^12.3.0",
+    "nextein": "^4.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
