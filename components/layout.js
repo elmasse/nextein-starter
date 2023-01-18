@@ -12,7 +12,7 @@ export default function Layout({ title, showNav = false, children }) {
         <title>{title}</title>
       </Head>
       <main>
-        {showNav && (<nav><Link href="/" passHref><a>{site.name}</a></Link></nav>)}
+        {showNav && (<nav><Link href="/" >{site.name}</Link></nav>)}
         {children}
       </main>
       <footer>
@@ -43,5 +43,5 @@ export default function Layout({ title, showNav = false, children }) {
         }
       `}</style>
   </div>
-  )
+  );
 }
